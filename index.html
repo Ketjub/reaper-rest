@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Reaper's Rest — a cursed tavern with friends</title>
+  <meta name="description" content="The Reaper's Rest is an online co-op tavern game with a retro PS1 look. Play blackjack with the Reaper, Russian roulette, and spend the night with friends. Made by a solo indie developer in Bahrain. Work in progress.">
+  <meta name="theme-color" content="#160A0C">
+  <link rel="canonical" href="https://reaper-rest.net/">
+  <meta property="og:title" content="The Reaper's Rest">
+  <meta property="og:description" content="A cursed tavern. Cards, guns and gold — with friends, online. Work in progress.">
+  <meta property="og:image" content="https://reaper-rest.net/assets/img/og.jpg">
+  <meta property="og:url" content="https://reaper-rest.net/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/LilitaOne-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ HERO: pixel castle, drawn in layers (parallax) ============ -->
+  <header class="hero" id="top">
+    <!-- The tavern hall from the game, rendered in 3 depth layers (far / mid / near).
+         Scrolling walks you into the hall: the near layer grows fastest. -->
+    <div class="layers" aria-hidden="true">
+      <img class="layer" src="assets/img/hero_far.webp" alt="" data-zoom="0.06" data-lift="0.30" data-sway="6">
+      <img class="layer" src="assets/img/hero_mid.webp" alt="" data-zoom="0.16" data-lift="0.18" data-sway="14">
+      <img class="layer" src="assets/img/hero_near.webp" alt="" data-zoom="0.42" data-lift="0.02" data-sway="26">
+      <canvas class="dust"></canvas>
+    </div>
+
+    <nav class="topbar">
+      <a class="brand" href="#top"><span class="brand-skull" aria-hidden="true"></span>THE REAPER'S REST</a>
+      <div class="topbar-links">
+        <a href="#tavern">The Tavern</a>
+        <a href="#teaser">Teaser</a>
+        <a href="#dev">The Dev</a>
+      </div>
+    </nav>
+
+    <div class="hero-text">
+      <p class="wip-chip">WORK IN PROGRESS</p>
+      <h1 class="title"><span>THE</span> REAPER'S REST</h1>
+      <p class="tagline">A cursed tavern. Cards, guns and gold &mdash; with friends, online.</p>
+      <div class="buttons">
+        <a class="btn btn-amber" href="#teaser">WATCH THE TEASER</a>
+        <a class="btn btn-blue" href="#dev">FOLLOW THE DEV</a>
+      </div>
+    </div>
+
+    <a class="scroll-hint" href="#tavern" aria-label="Scroll down">
+      <span>ENTER</span>
+      <i aria-hidden="true"></i>
+    </a>
+  </header>
+
+  <!-- ============ INTRO ============ -->
+  <main>
+    <section class="intro" id="tavern">
+      <div class="wrap">
+        <p class="kicker">WELCOME, TRAVELER</p>
+        <h2>Spend the night at the Reaper's tavern.</h2>
+        <p class="lead">
+          Meet your friends in the castle courtyard. When the bell rings, walk into the tavern.
+          The Reaper is behind the bar. Bet your gold, trust your luck, and try to pay the rent
+          before the sun comes up.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES (screenshots move at their own speed) ============ -->
+    <section class="features">
+      <article class="feature">
+        <div class="shot" data-parallax="0.12">
+          <img src="assets/img/blackjack.webp" alt="The skeleton dealer at the blackjack table, lit by candles" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="feature-text panel">
+          <p class="tag tag-amber">BLACKJACK</p>
+          <h3>Cards with the dead</h3>
+          <p>Sit at the green table. The skeleton deals. Hit, stand, or lose your gold to the house.</p>
+        </div>
+      </article>
+
+      <article class="feature flip">
+        <div class="shot" data-parallax="0.12">
+          <img src="assets/img/roulette_gun.webp" alt="A pumpkin-head player holding the revolver at the roulette table" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="feature-text panel">
+          <p class="tag tag-red">RUSSIAN ROULETTE</p>
+          <h3>Six chambers. One bullet.</h3>
+          <p>Two players, one gun. The crowd bets on who walks away. Listen to the heartbeat&hellip; then pull.</p>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="shot" data-parallax="0.12">
+          <img src="assets/img/courtyard.webp" alt="The castle courtyard at night, with red roofs and warm yellow windows" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="feature-text panel">
+          <p class="tag tag-blue">THE COURTYARD</p>
+          <h3>Mess around before the night</h3>
+          <p>Fire your friends from a catapult. Lock them in the stocks. Throw tomatoes. Sit on the throne.</p>
+        </div>
+      </article>
+
+      <article class="feature flip">
+        <div class="shot" data-parallax="0.12">
+          <img src="assets/img/tavern_hall.webp" alt="The great hall of the tavern full of strange guests" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="feature-text panel">
+          <p class="tag tag-green">ONLINE WITH FRIENDS</p>
+          <h3>Host. Share a code. Play.</h3>
+          <p>One friend hosts, the others join with a code. Skeletons, witches, pumpkins and vampires welcome.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ BIG PARALLAX BAND ============ -->
+    <section class="band" aria-label="The castle from above">
+      <div class="band-img" data-band style="background-image:url('assets/img/castle_above.webp')"></div>
+      <div class="band-text">
+        <p class="kicker">THE RENT IS DUE AT DAWN</p>
+        <p class="band-quote">&ldquo;Everyone pays the Reaper. Tonight, it's your turn.&rdquo;</p>
+      </div>
+    </section>
+
+    <!-- ============ TEASER ============ -->
+    <section class="teaser" id="teaser">
+      <div class="wrap teaser-grid">
+        <div class="teaser-copy">
+          <p class="kicker">TEASER</p>
+          <h2>Fifteen seconds in the tavern.</h2>
+          <p>A short look at the courtyard and the tavern. This video comes from an <strong>unfinished build</strong> &mdash; a lot will still change.</p>
+          <div class="gallery">
+            <img src="assets/img/roulette.webp" alt="Pumpkin-head player at the roulette table" loading="lazy" width="1280" height="720">
+            <img src="assets/img/bar.webp" alt="A vampire guest at the bar" loading="lazy" width="1280" height="720">
+            <img src="assets/img/gate.webp" alt="The castle gate at night" loading="lazy" width="1280" height="720">
+            <img src="assets/img/fireplace.webp" alt="The tavern fireplace" loading="lazy" width="1280" height="720">
+          </div>
+        </div>
+        <div class="phone">
+          <video src="assets/video/teaser.mp4" poster="assets/img/teaser_poster.webp" controls playsinline preload="none"></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK IN PROGRESS NOTICE ============ -->
+    <section class="wip" aria-labelledby="wip-title">
+      <div class="wrap">
+        <div class="wip-box panel">
+          <div class="wip-candle" aria-hidden="true"></div>
+          <div>
+            <h2 id="wip-title">This game is still being made</h2>
+            <p>
+              The Reaper's Rest is a <strong>work in progress</strong>. All pictures, videos and text on this page
+              come from an early build. The final game can look, sound and play different from what you see here.
+              Features can change, move, or be removed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE DEV ============ -->
+    <section class="dev" id="dev">
+      <div class="wrap dev-grid">
+        <div class="dev-card panel">
+          <p class="kicker">THE DEVELOPER</p>
+          <h2>Made by one indie dev in Bahrain</h2>
+          <p>
+            The Reaper's Rest is made by a solo indie game developer based in the Kingdom of Bahrain.
+            The models, the code, the sounds and the music are all made in-house, one candle at a time.
+          </p>
+          <p>Follow the journey for new pictures, clips and news:</p>
+          <div class="buttons">
+            <a class="btn btn-amber" href="https://www.instagram.com/the_reaper_rest/" target="_blank" rel="noopener">INSTAGRAM</a>
+            <a class="btn btn-blue" href="https://www.tiktok.com/@the_reaper_rest" target="_blank" rel="noopener">TIKTOK</a>
+          </div>
+        </div>
+        <div class="dev-flag" aria-hidden="true">
+          <div class="flag"></div>
+          <p>BAHRAIN</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="crenel" aria-hidden="true"></div>
+    <div class="wrap footer-inner">
+      <p class="footer-brand">THE REAPER'S REST</p>
+      <p>&copy; <span id="year">2026</span> The Reaper's Rest &middot; An indie game from Bahrain &middot; reaper-rest.net</p>
+      <p class="small">Work in progress. Everything shown is from an unfinished build and can change before release.</p>
+    </div>
+  </footer>
+
+  <!-- ============ THE REAPER (the bartender from the game) ============
+       He stands behind his bar while you scroll, watches your mouse and talks.
+       Poke him three times and he does what he does in the game. -->
+  <div class="reaper" id="reaper">
+    <div class="reaper-say" role="status" aria-live="polite"><p></p></div>
+    <button class="reaper-body" type="button" aria-label="Poke the Reaper">
+      <span class="reaper-sprite"></span>
+      <span class="reaper-flash" aria-hidden="true"></span>
+    </button>
+    <div class="reaper-bar" aria-hidden="true">
+      <span class="bar-candle"></span>
+      <span class="bar-coins"></span>
+    </div>
+  </div>
+
+  <div class="shot-screen" id="shotScreen" hidden>
+    <div class="shot-box">
+      <p class="shot-title">SHOT BY THE BARTENDER</p>
+      <p class="shot-sub">He did warn you.</p>
+      <button class="btn btn-amber" type="button" id="getUp">GET UP</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
